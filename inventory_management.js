@@ -56,3 +56,14 @@ function calculateInventoryValue() {
     const totalValue = inventory.reduce((total, product) => total + product.price * product.quantity, 0);
     return totalValue;
 }
+
+// Task 6: Create a Function to Process a Sale
+
+function processSale(productName, unitsSold) {
+    const product = inventory.find(item => item.name === productName);
+    if (product) {
+        updateStock(product, unitsSold);
+    } else {
+        console.log(`Error: ${productName} was not found in inventory`);
+    }
+}

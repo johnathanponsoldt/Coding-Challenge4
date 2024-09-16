@@ -13,3 +13,13 @@ const inventory = [
         { name: 'Volleyball', price: 30, quantity: 3, lowStockLevel: 1 }
     
 ];
+
+// Task 2: Create a Function to Display Product Details
+
+function displayProductDetails(product) {
+    const stockStatus = product.quantity > product.lowStockLevel ? "In Stock" : "Low Stock";
+    console.log(`Product: ${product.name}`);
+    console.log(`Price: $${product.price}`);
+    console.log(`Quantity: ${product.quantity}`);
+    console.log(`Stock Status: ${stockStatus}`);
+}
